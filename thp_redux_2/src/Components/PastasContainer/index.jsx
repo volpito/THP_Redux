@@ -1,12 +1,20 @@
-import { buyPastas } from '../../redux';
 import { connect } from 'react-redux';
+import { buyPastas } from '../../redux/index';
+
 
 
 const PastasContainer = (props) => {
+  
+  const onClick = () => {
+    return (
+      props.buyPastas()
+    )
+  }
+
   return (
     <div className="PastasContainer">
       <h1>Number of pastas kg : { props.pastas }</h1>
-      <button>Buy pastas</button>
+      <button onClick= {onClick}>Buy pastas</button>
     </div>
   );
 };

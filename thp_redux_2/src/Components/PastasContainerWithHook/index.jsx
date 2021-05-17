@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { buyPastas } from '../../redux/index';
 import { eatPastas } from '../../redux/index';
 
-
 const PastasContainerWithHook = () => {
   
   const onBuy = () => {
@@ -17,7 +16,7 @@ const PastasContainerWithHook = () => {
 
   return (
     <div className="PastasContainer">
-      <h1>Number of pastas kg : { pastas }</h1>
+      <h1>Number of pastas kg : { pastas.pastas }</h1>
       <button onClick= {onBuy}>Buy pastas</button>
       <button onClick= {onEat}>Eat pastas</button>
     </div>
